@@ -81,7 +81,7 @@ fun Mirror(
     Column {
         content()
         MirrorLayout(
-            fraction = .6f
+            fraction = .5f
         ) {
             content()
         }
@@ -100,7 +100,7 @@ fun MirrorLayout(
                 rotationZ = 180f
             }
             .drawWithContent {
-                val colors = listOf(lerp(Color.Transparent, Color.White, fraction), Color.White)
+                val colors = listOf(lerp(Color.White, Color.Transparent, fraction), Color.White)
                 drawContent()
                 drawRect(
                     brush = Brush.verticalGradient(colors),
